@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: @spring.profiles.active@
+  application:
+    name: feign-client-wiremock
+
+feign:
+  url: https://brasilapi.com.br/
