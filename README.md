@@ -1,3 +1,4 @@
+![pipeline status](https://github.com/ronaldofarrapo/demo-spring-boot-feign/actions/workflows/maven.yml/badge.svg)
 # OpenFeign Client with Integration Test API using WireMock 
 
 This a simple Spring Boot Application that easily consumes an external API through an OpenFeign client, implements integration API tests mocking through WireMock.
