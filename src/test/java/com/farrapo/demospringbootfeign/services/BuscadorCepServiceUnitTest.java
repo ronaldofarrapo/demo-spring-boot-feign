@@ -21,11 +21,15 @@ class BuscadorCepServiceUnitTest {
     void returns_a_cep_from_leblon() {
         stubFor(get("/api/cep/v2/22431050").willReturn(aResponse()
                 .withHeader("Content-Type", "application/json")
-                .withBody("{\"cep\": \"22431050\"," +
-                        " \"state\": \"RJ\"," +
-                        "\"city\": \"Rio de Janeiro\", " +
-                        "\"service\": \"wiremock-service\", " +
-                        " \"neighborhood\": \"Leblon\"}")
+                .withBody("""
+                        {
+                          "cep": "22431050",
+                          "state": "RJ",
+                          "city": "Rio de Janeiro",
+                          "service": "wiremock-service",
+                          "neighborhood": "Leblon"
+                        }
+                        """)
                 .withStatus(200)));
 
         AddressDto address = buscadorCepService.find("22431050");
